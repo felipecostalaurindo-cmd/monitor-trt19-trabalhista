@@ -1,0 +1,8 @@
+{
+  "_doc": "Copie para a pasta de trabalho ('= Monitor TRT-19') como 'config.local.json' (NÃO versionar — contém segredo). O monitor lê o webhook daqui para postar no Slack de forma headless na routine.",
+  "slack_canal": "#trt19-turmas",
+  "slack_webhook": "https://hooks.slack.com/services/XXXX/YYYY/ZZZZ",
+  "orgaos_default": ["Primeira Turma", "Segunda Turma"],
+  "incluir_tribunal_pleno": false,
+  "janela_dias_default": 7
+}
