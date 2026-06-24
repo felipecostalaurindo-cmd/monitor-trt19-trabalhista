@@ -35,10 +35,23 @@ python3 monitor_trt19.py classificar --inp coleta_bruta.csv --out classificado.c
 python3 monitor_trt19.py agregar     --inp classificado.csv --saida-dir <pasta> --base-dir <mãe> \
                                      --rotulo AAAA-MM-DD --inicio AAAA-MM-DD --fim AAAA-MM-DD
 python3 monitor_trt19.py notificar   --saida-dir <pasta> --config config.local.json
-python3 monitor_trt19.py filtrar     --inp classificado.csv [--turma|--classe|--materia|--subtema|--incidente|--texto ...]
+python3 monitor_trt19.py filtrar     --inp classificado.csv [--turma|--classe|--materia|--subtema|--incidente|--texto ...] [--com-ementa]
+python3 monitor_trt19.py publicar    --saida-dir <pasta> --rotulo AAAA-MM-DD --repo-dir <clone> [--push]
 ```
 
 Rodar `python3 monitor_trt19.py <subcomando> --help` para as opções.
+
+## Registros semanais e drill-down via Slack (`@Claude`)
+
+Cada rodada é arquivada em **`registros/<AAAA-MM-DD>/`** (`classificado.csv` + `resumo.json` +
+`resumo.md` + `slack.txt`). É a **fonte do drill-down**: respondendo à mensagem semanal no canal
+`#trt19-turmas`, o usuário menciona **`@Claude`** ("traz os números e as ementas dos processos
+sobre vínculo de emprego") e uma sessão do **Claude Code na nuvem** clona este repo, roda
+`filtrar` sobre o snapshot da semana e devolve os acórdãos com **número + matéria(s) + ementa +
+link**. O playbook que a sessão segue está em **`CLAUDE.md`** (carregado automaticamente).
+
+O `publicar` copia o registro datado para `registros/<rótulo>/` e, com `--push`, commita e envia —
+é o que mantém o drill-down do Slack alimentado a cada rodada (local ou routine de nuvem).
 
 ## Configuração
 

@@ -1,0 +1,729 @@
+{
+  "rotulo": "2026-06-15",
+  "gerado_em": "2026-06-23 15:58",
+  "janela": {
+    "inicio": "2026-06-08",
+    "fim": "2026-06-15",
+    "criterio": "data_juntada"
+  },
+  "total": 612,
+  "orgaos": [
+    "1ª Turma",
+    "2ª Turma"
+  ],
+  "classificado": true,
+  "por_turma": {
+    "1ª Turma": {
+      "total": 283,
+      "classes": [
+        {
+          "rotulo": "Recurso Ordinário Trabalhista",
+          "n": 127,
+          "pct": 44.9
+        },
+        {
+          "rotulo": "Agravo de Petição",
+          "n": 82,
+          "pct": 29.0
+        },
+        {
+          "rotulo": "Recurso Ordinário - Rito Sumaríssimo",
+          "n": 71,
+          "pct": 25.1
+        },
+        {
+          "rotulo": "Agravo de Instrumento em Agravo de Petição",
+          "n": 3,
+          "pct": 1.1
+        }
+      ],
+      "materias": [
+        {
+          "rotulo": "Execução trabalhista",
+          "n": 99,
+          "pct": 35.0
+        },
+        {
+          "rotulo": "Dano moral / existencial",
+          "n": 84,
+          "pct": 29.7
+        },
+        {
+          "rotulo": "Verbas rescisórias",
+          "n": 71,
+          "pct": 25.1
+        },
+        {
+          "rotulo": "Horas extras / jornada",
+          "n": 63,
+          "pct": 22.3
+        },
+        {
+          "rotulo": "Justa causa / modalidade de rescisão",
+          "n": 47,
+          "pct": 16.6
+        },
+        {
+          "rotulo": "Terceirização / responsabilidade subsidiária",
+          "n": 41,
+          "pct": 14.5
+        },
+        {
+          "rotulo": "Adicionais (insalubridade / periculosidade / noturno)",
+          "n": 40,
+          "pct": 14.1
+        },
+        {
+          "rotulo": "Salário e diferenças salariais",
+          "n": 34,
+          "pct": 12.0
+        },
+        {
+          "rotulo": "Intervalos (intra/interjornada)",
+          "n": 34,
+          "pct": 12.0
+        },
+        {
+          "rotulo": "FGTS",
+          "n": 32,
+          "pct": 11.3
+        },
+        {
+          "rotulo": "Equiparação / desvio e acúmulo de função",
+          "n": 26,
+          "pct": 9.2
+        },
+        {
+          "rotulo": "Doença ocupacional / acidente de trabalho",
+          "n": 22,
+          "pct": 7.8
+        },
+        {
+          "rotulo": "Vínculo de emprego",
+          "n": 22,
+          "pct": 7.8
+        },
+        {
+          "rotulo": "Contribuições previdenciárias e fiscais",
+          "n": 14,
+          "pct": 4.9
+        },
+        {
+          "rotulo": "Estabilidade / garantia de emprego",
+          "n": 13,
+          "pct": 4.6
+        },
+        {
+          "rotulo": "Grupo econômico / sucessão de empregadores",
+          "n": 13,
+          "pct": 4.6
+        }
+      ],
+      "incidentes": [
+        {
+          "rotulo": "Honorários sucumbenciais",
+          "n": 65,
+          "pct": 23.0
+        },
+        {
+          "rotulo": "Nulidade / negativa de prestação jurisdicional",
+          "n": 42,
+          "pct": 14.8
+        },
+        {
+          "rotulo": "Embargos de declaração / omissão",
+          "n": 39,
+          "pct": 13.8
+        },
+        {
+          "rotulo": "Tutela de urgência / liminar",
+          "n": 36,
+          "pct": 12.7
+        },
+        {
+          "rotulo": "Deserção / preparo / depósito recursal",
+          "n": 31,
+          "pct": 11.0
+        },
+        {
+          "rotulo": "Gratuidade da justiça (pós-reforma)",
+          "n": 31,
+          "pct": 11.0
+        },
+        {
+          "rotulo": "Cerceamento de defesa / prova",
+          "n": 31,
+          "pct": 11.0
+        },
+        {
+          "rotulo": "Execução / penhora",
+          "n": 30,
+          "pct": 10.6
+        },
+        {
+          "rotulo": "Competência",
+          "n": 19,
+          "pct": 6.7
+        },
+        {
+          "rotulo": "Prescrição (bienal/quinquenal/intercorrente)",
+          "n": 18,
+          "pct": 6.4
+        },
+        {
+          "rotulo": "Revelia / confissão ficta",
+          "n": 17,
+          "pct": 6.0
+        },
+        {
+          "rotulo": "Litigância de má-fé",
+          "n": 14,
+          "pct": 4.9
+        },
+        {
+          "rotulo": "Incidente de desconsideração da PJ",
+          "n": 13,
+          "pct": 4.6
+        },
+        {
+          "rotulo": "Honorários periciais",
+          "n": 11,
+          "pct": 3.9
+        },
+        {
+          "rotulo": "Limitação da condenação aos valores da inicial",
+          "n": 7,
+          "pct": 2.5
+        }
+      ]
+    },
+    "2ª Turma": {
+      "total": 329,
+      "classes": [
+        {
+          "rotulo": "Recurso Ordinário Trabalhista",
+          "n": 118,
+          "pct": 35.9
+        },
+        {
+          "rotulo": "Agravo de Petição",
+          "n": 115,
+          "pct": 35.0
+        },
+        {
+          "rotulo": "Recurso Ordinário - Rito Sumaríssimo",
+          "n": 88,
+          "pct": 26.7
+        },
+        {
+          "rotulo": "Agravo de Instrumento em Recurso Ordinário",
+          "n": 4,
+          "pct": 1.2
+        },
+        {
+          "rotulo": "Agravo de Instrumento em Agravo de Petição",
+          "n": 3,
+          "pct": 0.9
+        },
+        {
+          "rotulo": "Tutela Cautelar Antecedente",
+          "n": 1,
+          "pct": 0.3
+        }
+      ],
+      "materias": [
+        {
+          "rotulo": "Execução trabalhista",
+          "n": 136,
+          "pct": 41.3
+        },
+        {
+          "rotulo": "Dano moral / existencial",
+          "n": 69,
+          "pct": 21.0
+        },
+        {
+          "rotulo": "Horas extras / jornada",
+          "n": 64,
+          "pct": 19.5
+        },
+        {
+          "rotulo": "Verbas rescisórias",
+          "n": 64,
+          "pct": 19.5
+        },
+        {
+          "rotulo": "Terceirização / responsabilidade subsidiária",
+          "n": 42,
+          "pct": 12.8
+        },
+        {
+          "rotulo": "Adicionais (insalubridade / periculosidade / noturno)",
+          "n": 40,
+          "pct": 12.2
+        },
+        {
+          "rotulo": "Salário e diferenças salariais",
+          "n": 39,
+          "pct": 11.9
+        },
+        {
+          "rotulo": "Justa causa / modalidade de rescisão",
+          "n": 38,
+          "pct": 11.6
+        },
+        {
+          "rotulo": "Intervalos (intra/interjornada)",
+          "n": 29,
+          "pct": 8.8
+        },
+        {
+          "rotulo": "Doença ocupacional / acidente de trabalho",
+          "n": 29,
+          "pct": 8.8
+        },
+        {
+          "rotulo": "Equiparação / desvio e acúmulo de função",
+          "n": 29,
+          "pct": 8.8
+        },
+        {
+          "rotulo": "Vínculo de emprego",
+          "n": 25,
+          "pct": 7.6
+        },
+        {
+          "rotulo": "FGTS",
+          "n": 25,
+          "pct": 7.6
+        },
+        {
+          "rotulo": "Grupo econômico / sucessão de empregadores",
+          "n": 16,
+          "pct": 4.9
+        },
+        {
+          "rotulo": "Contribuições previdenciárias e fiscais",
+          "n": 6,
+          "pct": 1.8
+        },
+        {
+          "rotulo": "Estabilidade / garantia de emprego",
+          "n": 5,
+          "pct": 1.5
+        }
+      ],
+      "incidentes": [
+        {
+          "rotulo": "Embargos de declaração / omissão",
+          "n": 114,
+          "pct": 34.7
+        },
+        {
+          "rotulo": "Honorários sucumbenciais",
+          "n": 81,
+          "pct": 24.6
+        },
+        {
+          "rotulo": "Gratuidade da justiça (pós-reforma)",
+          "n": 53,
+          "pct": 16.1
+        },
+        {
+          "rotulo": "Nulidade / negativa de prestação jurisdicional",
+          "n": 50,
+          "pct": 15.2
+        },
+        {
+          "rotulo": "Deserção / preparo / depósito recursal",
+          "n": 47,
+          "pct": 14.3
+        },
+        {
+          "rotulo": "Execução / penhora",
+          "n": 43,
+          "pct": 13.1
+        },
+        {
+          "rotulo": "Cerceamento de defesa / prova",
+          "n": 34,
+          "pct": 10.3
+        },
+        {
+          "rotulo": "Tutela de urgência / liminar",
+          "n": 22,
+          "pct": 6.7
+        },
+        {
+          "rotulo": "Incidente de desconsideração da PJ",
+          "n": 21,
+          "pct": 6.4
+        },
+        {
+          "rotulo": "Competência",
+          "n": 20,
+          "pct": 6.1
+        },
+        {
+          "rotulo": "Prescrição (bienal/quinquenal/intercorrente)",
+          "n": 19,
+          "pct": 5.8
+        },
+        {
+          "rotulo": "Revelia / confissão ficta",
+          "n": 10,
+          "pct": 3.0
+        },
+        {
+          "rotulo": "Honorários periciais",
+          "n": 7,
+          "pct": 2.1
+        },
+        {
+          "rotulo": "Limitação da condenação aos valores da inicial",
+          "n": 5,
+          "pct": 1.5
+        },
+        {
+          "rotulo": "Litigância de má-fé",
+          "n": 5,
+          "pct": 1.5
+        }
+      ]
+    }
+  },
+  "destaques": [
+    {
+      "area": "Adicionais (insalubridade / periculosidade / noturno)",
+      "total": 80,
+      "pct_pauta": 13.1,
+      "subtemas": [
+        {
+          "rotulo": "Insalubridade",
+          "n": 46,
+          "pct": 57.5
+        },
+        {
+          "rotulo": "Periculosidade",
+          "n": 20,
+          "pct": 25.0
+        },
+        {
+          "rotulo": "Adicional noturno",
+          "n": 11,
+          "pct": 13.8
+        },
+        {
+          "rotulo": "Adicional de transferência",
+          "n": 2,
+          "pct": 2.5
+        },
+        {
+          "rotulo": "Outros",
+          "n": 1,
+          "pct": 1.2
+        }
+      ]
+    },
+    {
+      "area": "Verbas rescisórias",
+      "total": 135,
+      "pct_pauta": 22.1,
+      "subtemas": [
+        {
+          "rotulo": "Outros",
+          "n": 57,
+          "pct": 42.2
+        },
+        {
+          "rotulo": "Multa do art. 467 (verbas incontroversas)",
+          "n": 53,
+          "pct": 39.3
+        },
+        {
+          "rotulo": "Aviso prévio",
+          "n": 14,
+          "pct": 10.4
+        },
+        {
+          "rotulo": "Seguro-desemprego / guias / seguro",
+          "n": 6,
+          "pct": 4.4
+        },
+        {
+          "rotulo": "Multa do art. 477 (atraso na quitação)",
+          "n": 4,
+          "pct": 3.0
+        },
+        {
+          "rotulo": "Saldo / férias / 13º proporcionais",
+          "n": 1,
+          "pct": 0.7
+        }
+      ]
+    },
+    {
+      "area": "Horas extras / jornada",
+      "total": 127,
+      "pct_pauta": 20.8,
+      "subtemas": [
+        {
+          "rotulo": "Outros",
+          "n": 66,
+          "pct": 52.0
+        },
+        {
+          "rotulo": "Controle de jornada / ônus da prova",
+          "n": 25,
+          "pct": 19.7
+        },
+        {
+          "rotulo": "Banco de horas / compensação",
+          "n": 14,
+          "pct": 11.0
+        },
+        {
+          "rotulo": "Cargo de confiança / art. 62 (exclusão)",
+          "n": 13,
+          "pct": 10.2
+        },
+        {
+          "rotulo": "Sobreaviso / prontidão",
+          "n": 6,
+          "pct": 4.7
+        },
+        {
+          "rotulo": "Horas in itinere",
+          "n": 2,
+          "pct": 1.6
+        },
+        {
+          "rotulo": "Turnos ininterruptos / 12x36",
+          "n": 1,
+          "pct": 0.8
+        }
+      ]
+    },
+    {
+      "area": "Estabilidade / garantia de emprego",
+      "total": 18,
+      "pct_pauta": 2.9,
+      "subtemas": [
+        {
+          "rotulo": "Outros",
+          "n": 7,
+          "pct": 38.9
+        },
+        {
+          "rotulo": "Gestante",
+          "n": 7,
+          "pct": 38.9
+        },
+        {
+          "rotulo": "Acidentária",
+          "n": 4,
+          "pct": 22.2
+        }
+      ]
+    }
+  ],
+  "incidentes_proc": [
+    {
+      "rotulo": "Embargos de declaração / omissão",
+      "n": 153,
+      "pct": 25.0
+    },
+    {
+      "rotulo": "Honorários sucumbenciais",
+      "n": 146,
+      "pct": 23.9
+    },
+    {
+      "rotulo": "Nulidade / negativa de prestação jurisdicional",
+      "n": 92,
+      "pct": 15.0
+    },
+    {
+      "rotulo": "Gratuidade da justiça (pós-reforma)",
+      "n": 84,
+      "pct": 13.7
+    },
+    {
+      "rotulo": "Deserção / preparo / depósito recursal",
+      "n": 78,
+      "pct": 12.7
+    },
+    {
+      "rotulo": "Execução / penhora",
+      "n": 73,
+      "pct": 11.9
+    },
+    {
+      "rotulo": "Cerceamento de defesa / prova",
+      "n": 65,
+      "pct": 10.6
+    },
+    {
+      "rotulo": "Tutela de urgência / liminar",
+      "n": 58,
+      "pct": 9.5
+    },
+    {
+      "rotulo": "Competência",
+      "n": 39,
+      "pct": 6.4
+    },
+    {
+      "rotulo": "Prescrição (bienal/quinquenal/intercorrente)",
+      "n": 37,
+      "pct": 6.0
+    },
+    {
+      "rotulo": "Incidente de desconsideração da PJ",
+      "n": 34,
+      "pct": 5.6
+    },
+    {
+      "rotulo": "Revelia / confissão ficta",
+      "n": 27,
+      "pct": 4.4
+    },
+    {
+      "rotulo": "Litigância de má-fé",
+      "n": 19,
+      "pct": 3.1
+    },
+    {
+      "rotulo": "Honorários periciais",
+      "n": 18,
+      "pct": 2.9
+    },
+    {
+      "rotulo": "Limitação da condenação aos valores da inicial",
+      "n": 12,
+      "pct": 2.0
+    }
+  ],
+  "residuo_sem_materia": {
+    "n": 5,
+    "pct": 0.8
+  },
+  "_nota": "Fase 2: matéria trabalhista (incidência, multivalorada) + classe + subtemas + incidentes processuais.",
+  "geral": {
+    "classes": [
+      {
+        "rotulo": "Recurso Ordinário Trabalhista",
+        "n": 245,
+        "pct": 40.0
+      },
+      {
+        "rotulo": "Agravo de Petição",
+        "n": 197,
+        "pct": 32.2
+      },
+      {
+        "rotulo": "Recurso Ordinário - Rito Sumaríssimo",
+        "n": 159,
+        "pct": 26.0
+      },
+      {
+        "rotulo": "Agravo de Instrumento em Agravo de Petição",
+        "n": 6,
+        "pct": 1.0
+      },
+      {
+        "rotulo": "Agravo de Instrumento em Recurso Ordinário",
+        "n": 4,
+        "pct": 0.7
+      },
+      {
+        "rotulo": "Tutela Cautelar Antecedente",
+        "n": 1,
+        "pct": 0.2
+      }
+    ],
+    "materias": [
+      {
+        "rotulo": "Execução trabalhista",
+        "n": 235,
+        "pct": 38.4
+      },
+      {
+        "rotulo": "Dano moral / existencial",
+        "n": 153,
+        "pct": 25.0
+      },
+      {
+        "rotulo": "Verbas rescisórias",
+        "n": 135,
+        "pct": 22.1
+      },
+      {
+        "rotulo": "Horas extras / jornada",
+        "n": 127,
+        "pct": 20.8
+      },
+      {
+        "rotulo": "Justa causa / modalidade de rescisão",
+        "n": 85,
+        "pct": 13.9
+      },
+      {
+        "rotulo": "Terceirização / responsabilidade subsidiária",
+        "n": 83,
+        "pct": 13.6
+      },
+      {
+        "rotulo": "Adicionais (insalubridade / periculosidade / noturno)",
+        "n": 80,
+        "pct": 13.1
+      },
+      {
+        "rotulo": "Salário e diferenças salariais",
+        "n": 73,
+        "pct": 11.9
+      },
+      {
+        "rotulo": "Intervalos (intra/interjornada)",
+        "n": 63,
+        "pct": 10.3
+      },
+      {
+        "rotulo": "FGTS",
+        "n": 57,
+        "pct": 9.3
+      },
+      {
+        "rotulo": "Equiparação / desvio e acúmulo de função",
+        "n": 55,
+        "pct": 9.0
+      },
+      {
+        "rotulo": "Doença ocupacional / acidente de trabalho",
+        "n": 51,
+        "pct": 8.3
+      },
+      {
+        "rotulo": "Vínculo de emprego",
+        "n": 47,
+        "pct": 7.7
+      },
+      {
+        "rotulo": "Grupo econômico / sucessão de empregadores",
+        "n": 29,
+        "pct": 4.7
+      },
+      {
+        "rotulo": "Contribuições previdenciárias e fiscais",
+        "n": 20,
+        "pct": 3.3
+      },
+      {
+        "rotulo": "Estabilidade / garantia de emprego",
+        "n": 18,
+        "pct": 2.9
+      }
+    ]
+  },
+  "tendencia_vs": null
+}

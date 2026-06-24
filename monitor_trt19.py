@@ -517,6 +517,10 @@ def _cmd_classificar(args):
     n_llm = 0
     for r in rows:
         r.update(classificar_linha(r, tax))
+        # O FALCÃO-TRT19 deixa 'ementa' VAZIO; grava a ementa CNJ extraída do inteiro teor
+        # (texto da matéria DECIDIDA) p/ o drill-down e a busca por --texto a terem o que ler.
+        if not (r.get("ementa") or "").strip():
+            r["ementa"] = _texto_ementa(r)
         if r["precisa_llm"]:
             n_llm += 1
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
@@ -908,7 +912,61 @@ def _cmd_filtrar(args):
                 print(f"    incidentes: {r['incidentes'].replace('|', ', ')}")
             print(f"    Rel. {r.get('relator', '')} · julg. {r.get('data_julgamento', '')} · junt. {r.get('data_juntada', '')}")
             print(f"    {r.get('url', '')}")
+            if getattr(args, "com_ementa", False):
+                em = " ".join(_texto_ementa(r).split())
+                if em:
+                    lim = getattr(args, "max_ementa", 1200)
+                    print(f"    ementa: {em[:lim]}{'…' if len(em) > lim else ''}")
     print(f"\n({len(sel)} de {len(rows)})", file=sys.stderr)
+
+
+def _cmd_publicar(args):
+    """Copia o registro datado p/ o clone local do repo (registros/<rotulo>/) — o que o
+    Claude da nuvem (Slack @Claude / routine) lê para o drill-down. Com --push, commita+envia."""
+    import shutil
+    destino = os.path.join(args.repo_dir, "registros", args.rotulo)
+    os.makedirs(destino, exist_ok=True)
+    copiados = []
+    # classificado.csv -> versão ENXUTA (sem 'inteiro_teor', que é ~90% do peso) p/ o repo
+    # ficar leve. A coluna 'ementa' (populada no 'classificar') basta p/ o drill-down e p/ a
+    # busca por --texto; o link leva ao inteiro teor quando preciso.
+    src_csv = os.path.join(args.saida_dir, "classificado.csv")
+    if os.path.exists(src_csv):
+        campos = [c for c in CAMPOS_CLASS if c != "inteiro_teor"]
+        with open(src_csv, encoding="utf-8") as fin, \
+             open(os.path.join(destino, "classificado.csv"), "w", newline="", encoding="utf-8") as fout:
+            w = csv.DictWriter(fout, fieldnames=campos)
+            w.writeheader()
+            for r in csv.DictReader(fin):
+                w.writerow({k: r.get(k, "") for k in campos})
+        copiados.append("classificado.csv (enxuto)")
+    for nome in ("resumo.json", "resumo.md", "slack.txt"):
+        src = os.path.join(args.saida_dir, nome)
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(destino, nome))
+            copiados.append(nome)
+    print(f"OK: {len(copiados)} arquivo(s) -> {destino} ({', '.join(copiados)})", file=sys.stderr)
+    if not args.push:
+        return
+    import subprocess
+
+    def git(*a):
+        return subprocess.run(["git", "-C", args.repo_dir, *a], capture_output=True, text=True)
+
+    git("add", os.path.join("registros", args.rotulo))
+    r = git("commit", "-m", f"registros: rodada {args.rotulo}")
+    saida = r.stdout + r.stderr
+    if r.returncode != 0 and "nothing to commit" in saida:
+        print("git: nada a commitar (registro já publicado)", file=sys.stderr)
+        return
+    if r.returncode != 0:
+        print(f"git commit falhou: {saida.strip()}", file=sys.stderr)
+        return
+    rp = git("push")
+    if rp.returncode != 0:
+        print(f"git push falhou: {(rp.stdout + rp.stderr).strip()}", file=sys.stderr)
+    else:
+        print(f"git: publicado e enviado ({args.rotulo})", file=sys.stderr)
 
 
 # ----------------------------------------------------------------------------- #
@@ -961,8 +1019,17 @@ def main():
     f.add_argument("--incidente", help="Filtra por incidente processual (ex.: 'Gratuidade', 'Prescrição')")
     f.add_argument("--relator", help="Filtra por relator (substring)")
     f.add_argument("--texto", help="Filtra por termo na ementa/inteiro teor (substring)")
+    f.add_argument("--com-ementa", action="store_true", help="Inclui o texto da ementa (extraída do inteiro teor) na saída lista")
+    f.add_argument("--max-ementa", type=int, default=1200, help="Máx. de caracteres da ementa impressa (com --com-ementa)")
     f.add_argument("--formato", choices=["lista", "csv"], default="lista")
     f.set_defaults(func=_cmd_filtrar)
+
+    p = sub.add_parser("publicar", help="Copia o registro datado p/ o repo (registros/<rotulo>/) e, com --push, commita+envia")
+    p.add_argument("--saida-dir", required=True, help="Pasta datada de origem (AAAA-MM-DD)")
+    p.add_argument("--rotulo", required=True, help="Rótulo da rodada (AAAA-MM-DD)")
+    p.add_argument("--repo-dir", required=True, help="Caminho do clone local do repo monitor-trt19-trabalhista")
+    p.add_argument("--push", action="store_true", help="git add+commit+push do registro publicado")
+    p.set_defaults(func=_cmd_publicar)
 
     args = ap.parse_args()
     if args.cmd == "coletar" and not args.dias and not (args.inicio and args.fim):
