@@ -42,9 +42,13 @@ Os dados já estão arquivados — **não rode `coletar`** para responder a um d
 e pode divergir do que foi postado). Filtre o snapshot com o subcomando `filtrar`:
 
 ```bash
+# PADRÃO (enxuto — número + Turma + relator + link, SEM ementa): é o que cabe e é entregue no Slack
 python3 monitor_trt19.py filtrar \
-  --inp registros/<AAAA-MM-DD>/classificado.csv \
-  --materia "Vínculo" --com-ementa
+  --inp registros/<AAAA-MM-DD>/classificado.csv --materia "Vínculo"
+
+# SOB DEMANDA (ementa — só quando o usuário pedir, idealmente de processos específicos)
+python3 monitor_trt19.py filtrar \
+  --inp registros/<AAAA-MM-DD>/classificado.csv --materia "Vínculo" --com-ementa
 ```
 
 Filtros (todos são **substring, case-insensitive**, e combináveis):
@@ -78,14 +82,22 @@ Basta a substring distintiva (ex.: `--materia "Vínculo"`, `--materia "Terceiriz
 **multivalorada**: um acórdão pode aparecer em vários filtros (a contagem por incidência não soma
 100%) — isso é esperado.
 
-## Como responder no Slack
+## Como responder no Slack — REGRA DE OURO: enxuto primeiro, ementa sob demanda
 
-- Traga os acórdãos do recorte: **número CNJ + classe + Turma + relator + a ementa** (resumida) +
-  o **link** (`https://jurisprudencia.jt.jus.br/.../pesquisa/numero/<CNJ>`).
-- Seja conciso e escaneável (uma entrada por acórdão). Se forem muitos (>~15), diga o total e
-  ofereça refinar (por Turma, por classe, por relator).
-- Os acórdãos são **públicos** (jurisprudência publicada) — pode listar número e ementa à vontade.
-- Diga de qual **rodada/semana** vieram os dados.
+⚠️ **O bot do Slack tem limite de tamanho.** Respostas longas (várias ementas de uma vez) **não são
+entregues no canal** — ficam só na sessão, e para o usuário parece que "não respondeu". Por isso:
+
+1. **Resposta padrão = lista ENXUTA.** Uma linha por acórdão: **número CNJ + Turma + relator +
+   link** — **SEM ementa**. Cabe na mensagem e é sempre entregue. Abra dizendo o **total** e de qual
+   **rodada/semana** vieram os dados.
+2. **Ementa só quando o usuário pedir** — e de preferência de **processos específicos** ("me dá a
+   ementa do 0000511-68"). Nunca despeje todas as ementas do recorte de uma vez.
+3. **Se o recorte for grande** (mais de ~40 acórdãos, ou se a lista enxuta passar de ~3.500
+   caracteres): **não tente mandar tudo numa mensagem.** Em vez disso: (a) diga o **total**, e
+   (b) poste os números em **blocos** (várias respostas no thread) **ou** ofereça **refinar** (por
+   Turma, classe, relator, subtema, incidente). Avise quantos ficaram de fora de cada bloco.
+- Os acórdãos são **públicos** (jurisprudência publicada) — pode listar número e link à vontade.
+- Link do inteiro teor: `https://jurisprudencia.jt.jus.br/jurisprudencia-nacional/pesquisa/numero/<CNJ>?abaSelecionada=acordaos`.
 
 ## Limitações honestas (não esconda do usuário)
 
